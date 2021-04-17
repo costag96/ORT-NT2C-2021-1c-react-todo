@@ -59,8 +59,7 @@ export default class App extends Component {
         </button>
         <ul id="todo-list" class="todo-list">
           {this.state.tareas.map((tarea, index) => (
-            <Tarea key={index} id={index} titulo={tarea.titulo} marcar={ this.checkTarea.bind(this)} /> 
-            // Bind this es necesario para que checkTarea se ejecute en el contexto de App y no del html
+            <Tarea key={index} id={index} titulo={tarea.titulo} marcar={ () => this.checkTarea(index)} /> 
           ))}
         </ul>
       </div>

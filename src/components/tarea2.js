@@ -6,9 +6,10 @@ export default class Tarea extends Component {
       return (
         <div>
             <li class="todo-container"><span class="todo-text">{this.props.titulo}</span>
-                <input  type="checkbox" onClick={()=>this.props.marcar(this.props.id)} class='todo-checkbox'></input>
+                <input  type="checkbox" onClick={this.props.marcar} class='todo-checkbox'></input>
             </li>
         </div>
       );
     }
   }
+
